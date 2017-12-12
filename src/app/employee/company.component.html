@@ -1,0 +1,61 @@
+
+ <nav>
+    <a routerLink="/about-us" routerLinkActive="active">AboutUs</a>
+    <a routerLink="/company-details" routerLinkActive="active">Company Details</a>
+    <a routerLink="/employee-details" routerLinkActive="active">Employee Details</a>
+    <a routerLink="/Other-details" routerLinkActive="active">Other Details</a>
+    </nav>
+    <br/>
+
+<table class="table" myVisibility>
+    <thead>
+        <tr>
+            <th colspan="2">
+                Company Details
+                </th>
+            </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Company Name</td>
+        <td>{{companyName}}</td>
+    </tr>
+    <tr>
+        <td> Location </td>
+        <td>{{location}}</td>
+    </tr>
+
+    <tr *ngIf='showDetails'>
+        <td> Business Address </td>
+        <td>{{businessAddress}}</td>
+    </tr>
+      <tr *ngIf='showDetails'>
+        <td> Email </td>
+        <td>{{email}}</td>
+    </tr>
+      <tr *ngIf='showDetails'>
+        <td> Phone </td>
+        <td>{{Tel}}</td>
+    </tr>
+     <tr *ngIf='showDetails'>
+        <td> Fax </td>
+        <td>{{fax}}</td>
+    </tr>
+     <tr *ngIf='showDetails'>
+        <td> Primary Line Of Business </td>
+        <td>{{primaryLineOfBusiness}}</td>
+    </tr>
+    <tr *ngIf='showDetails'>
+        <td> Parent Organization </td>
+        <td>{{parentOrganization}}</td>
+    </tr>
+    <tr *ngIf='showDetails'>
+        <td> Additional Information </td>
+        <td>{{additionalInformation}}</td>
+    </tr>
+
+    </tbody>
+    </table>
+    <br/>
+    <button (click)="toggleDetails()"> {{showDetails? 'Hide' : 'Show'}} Details
+    </button> 

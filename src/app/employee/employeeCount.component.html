@@ -1,0 +1,23 @@
+
+
+<input type="checkbox" value="Search by Code" [(ngModel)]="isSomethingChecked" [(ngModel)]="SelectedRadioButtonValue" (change)="OnRadioButtonChanged()" > 
+<span class="radioClass"> Search By Code :</span>
+<!--[disabled]="!isSomethingChecked" -->
+<input type="text" [disabled]="!isSomethingChecked" [(ngModel)]="SelectedNameChangedValue" id="search" placeholder="Search to type"  (change)="OnTextChanged()">
+<span class="radioClass"> Show:</span>
+ 
+<!-- [(ngModel)]="isSomethingChecked" //to disable the other button on chang eof this radio button-->
+
+<!--<input type="radio" name="option"   value="SearchByCode" [(ngModel)]="SelectedRadioButtonValue" (change)="OnRadioButtonChanged()"/>
+<span class="radioClass">Search By Code</span>-->
+
+<!--[disabled]="isSomethingChecked" //to disable the other button-->
+<input type="radio" name="option" [disabled]="isSomethingChecked" value="All" [(ngModel)]="SelectedRadioButtonValue" (change)="OnRadioButtonChanged()"/>
+<span class="radioClass">{{"All(" + all + ")"}}</span>
+
+<input type="radio" name="option"[disabled]="isSomethingChecked" value="Male" [(ngModel)]="SelectedRadioButtonValue" (change)="OnRadioButtonChanged()">
+<span class="radioClass">{{"Male(" + male + ")"}}</span>
+
+<input type="radio" name="option" [disabled]="isSomethingChecked" value= "Female" [(ngModel)]="SelectedRadioButtonValue" (change)="OnRadioButtonChanged()" >
+<span class="radioClass">{{"Female(" + female + ")"}}</span>
+
